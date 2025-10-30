@@ -6,7 +6,7 @@ public class DealershipFileManger {
 
     public Dealership getDealership() throws FileNotFoundException {
         try {
-            FileReader fileReader = new FileReader("carinventory.csv");
+            FileReader fileReader = new FileReader("inventory.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             //read the first line of dealership info
@@ -26,7 +26,7 @@ public class DealershipFileManger {
                         data[3], //MOdel
                         data[4], //type
                         data[5], //color
-                        Integer.parseInt(data[6]), //odemeter
+                        Integer.parseInt(data[6]), //odometer
                         Double.parseDouble(data[7])
                 );
                 dealership.addVehicle(vehicle);
