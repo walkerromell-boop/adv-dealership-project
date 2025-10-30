@@ -44,12 +44,23 @@ public class Dealership {
 
     public List<Vehicle> getVehicleByPrice(double minPrice, double maxPrice) {
         List<Vehicle> filtered = new ArrayList<>();
-        return null;
+        for (Vehicle v : vehicles) {
+            if (v.getPrice() >= minPrice && v.getPrice() <= maxPrice) {
+                filtered.add(v);
+            }
+        }
+        return filtered;
     }
 
-    public List<Vehicle> getVehicleByMakeModel(String make, String model) {
-        List<Vehicle> filtered = new ArrayList<>();
-        return null;
+    public List<Vehicle> getVehicleByMakeModel(String search) {
+        List<Vehicle> results = new ArrayList<>();
+        for (Vehicle v : vehicles) {
+            if (v.getMake().toLowerCase().contains(search.toLowerCase()) ||
+                    v.getModel().toLowerCase().contains(search.toLowerCase())) {
+                results.add(v);
+            }
+        }
+        return results;
     }
 
     public List<Vehicle> getVehicleByColor(String color) {
@@ -72,14 +83,14 @@ public class Dealership {
         return null;
     }
 
-    public List<Vehicle> getAllVehicle() {
-        List<Vehicle> filtered = new ArrayList<>();
-        return null;
+    public List<Vehicle> getAllVehicles() {
+//        List<Vehicle> filtered = new ArrayList<>();
+        return vehicles;
     }
 
-    public List<Vehicle> addVehicle(Vehicle newVehicles) {
-        List<Vehicle> filtered = new ArrayList<>();
-        return null;
+    public void addVehicle(Vehicle newVehicles) {
+        vehicles.add(newVehicles);
+
     }
 
     public List<Vehicle> removeVehicle() {

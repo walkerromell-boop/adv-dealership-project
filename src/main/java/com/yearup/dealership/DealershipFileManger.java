@@ -4,7 +4,8 @@ import java.io.*;
 
 public class DealershipFileManger {
 
-    public Dealership getDealership() throws FileNotFoundException {
+    public Dealership getDealership()  {
+        Dealership dealership=null;
         try {
             FileReader fileReader = new FileReader("inventory.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -12,7 +13,7 @@ public class DealershipFileManger {
             //read the first line of dealership info
             String dealershipLine = bufferedReader.readLine();
             String[] parts = dealershipLine.split("\\|");
-            Dealership dealership = new Dealership(parts[0], parts[1], parts[2]);
+             dealership = new Dealership(parts[0], parts[1], parts[2]);
 
             //this part reads each vehicle line
             String line;
@@ -30,14 +31,14 @@ public class DealershipFileManger {
                         Double.parseDouble(data[7])
                 );
                 dealership.addVehicle(vehicle);
+                System.out.println("Loaded vehicle: " + vehicle.getMake() + " " + vehicle.getModel());
             }
             bufferedReader.close();
-            return dealership;
+
         }catch (IOException e){
             e.printStackTrace();
-            return null;
         }
-
+        return dealership;
     }
 
     public Dealership saveDealership() {
