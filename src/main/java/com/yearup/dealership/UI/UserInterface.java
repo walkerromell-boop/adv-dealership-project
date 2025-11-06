@@ -1,4 +1,8 @@
-package com.yearup.dealership;
+package com.yearup.dealership.UI;
+
+import com.yearup.dealership.model.Dealership;
+import com.yearup.dealership.model.Vehicle;
+import com.yearup.dealership.data.DealershipFileManger;
 
 import java.io.FileNotFoundException;
 import java.util.List;

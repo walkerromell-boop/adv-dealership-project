@@ -1,7 +1,6 @@
-package com.yearup.dealership;
+package com.yearup.dealership.model;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public abstract class Contract {
     private LocalDate contractDate;

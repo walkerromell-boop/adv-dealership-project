@@ -1,4 +1,7 @@
-package com.yearup.dealership;
+package com.yearup.dealership.data;
+
+import com.yearup.dealership.model.Dealership;
+import com.yearup.dealership.model.Vehicle;
 
 import java.io.*;
 

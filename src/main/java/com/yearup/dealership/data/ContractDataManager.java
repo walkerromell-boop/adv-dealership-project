@@ -1,6 +1,10 @@
-package com.yearup.dealership;
+package com.yearup.dealership.data;
 
-import java.io.BufferedReader;
+import com.yearup.dealership.model.Contract;
+import com.yearup.dealership.model.LeaseContract;
+import com.yearup.dealership.model.SalesContract;
+import com.yearup.dealership.model.Vehicle;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;

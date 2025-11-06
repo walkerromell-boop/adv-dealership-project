@@ -1,4 +1,4 @@
-package com.yearup.dealership;
+package com.yearup.dealership.model;
 
 import java.time.LocalDate;
 
@@ -19,7 +19,8 @@ public class LeaseContract extends Contract {
     @Override
     public double getTotalPrice() {
 
-        double leasingFee = getVehicle().getPrice() * leasingFee;
+        double leasingFee = 0.07;
+        leasingFee = getVehicle().getPrice() * leasingFee;
         return expectedEndingValue + leasingFee;
     }
 
